@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact us — Mobenertech</title>
+    <meta name="description" content="Contact Mobenertech in Kampala, Uganda — business services, press, investors and careers." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div data-header></div>
+
+    <main>
+      <header class="page-hero page-hero--contact">
+        <div class="page-hero-inner">
+          <p class="breadcrumb"><a href="index.html">Home</a> / Contact us</p>
+          <h1>Contact us</h1>
+          <p>
+            Reach our Kampala headquarters or tell us what you need — business, press,
+            investors or careers. We serve clients worldwide.
+          </p>
+        </div>
+      </header>
+
+      <section class="page-section">
+        <div class="content-grid">
+          <div>
+            <h2>Send a message</h2>
+            <p class="lead">Our team will route your enquiry to the right specialists.</p>
+            <form class="contact-form" action="#" method="post">
+              <label>
+                <span>Name</span>
+                <input type="text" name="name" required autocomplete="name" />
+              </label>
+              <label>
+                <span>Email</span>
+                <input type="email" name="email" required autocomplete="email" />
+              </label>
+              <label>
+                <span>Organisation</span>
+                <input type="text" name="org" autocomplete="organization" />
+              </label>
+              <label>
+                <span>Country</span>
+                <input type="text" name="country" placeholder="e.g. Uganda, Kenya, UK…" />
+              </label>
+              <label>
+                <span>Interest</span>
+                <select name="interest" required>
+                  <option value="" disabled selected>Select</option>
+                  <option>Business services</option>
+                  <option>Networks &amp; technology</option>
+                  <option>Investor relations</option>
+                  <option>Press / media</option>
+                  <option>Careers</option>
+                </select>
+              </label>
+              <label class="full">
+                <span>Message</span>
+                <textarea name="message" rows="5" required></textarea>
+              </label>
+              <button class="btn-primary" type="submit">Send</button>
+            </form>
+            <p class="form-note" role="status" aria-live="polite"></p>
+          </div>
+
+          <div>
+            <h2>Offices</h2>
+            <div class="office-photo" role="img" aria-label="Mobenertech office"></div>
+            <div class="content-grid" style="margin-top: 1rem; gap: 1rem">
+              <article class="office-card">
+                <h3>Headquarters — Kampala</h3>
+                <p>
+                  Mobenertech Ltd<br />
+                  Kampala, Uganda<br /><br />
+                  <a class="text-link" href="mailto:hello@mobenertech.com">hello@mobenertech.com</a><br />
+                  <a class="text-link" href="tel:+256700000000">+256 700 000 000</a>
+                </p>
+              </article>
+              <article class="office-card">
+                <h3>Global delivery</h3>
+                <p>
+                  Remote &amp; hybrid squads supporting clients in East Africa, Europe,
+                  the Middle East and the Americas.<br /><br />
+                  Press:
+                  <a class="text-link" href="mailto:press@mobenertech.com">press@mobenertech.com</a><br />
+                  Investors:
+                  <a class="text-link" href="mailto:investors@mobenertech.com">investors@mobenertech.com</a>
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div data-footer></div>
+    <script src="main.js"></script>
+  </body>
+</html>
