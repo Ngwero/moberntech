@@ -301,6 +301,14 @@
     { passive: true }
   );
 
+  window.addEventListener(
+    "resize",
+    () => {
+      if (window.innerWidth >= 980) closeDrawer();
+    },
+    { passive: true }
+  );
+
   if (form && formNote) {
     form.addEventListener("submit", (event) => {
       event.preventDefault();
@@ -320,9 +328,10 @@
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   if (particlesHost && typeof particlesJS === "function" && !reduceMotion) {
+    const isNarrow = window.matchMedia("(max-width: 700px)").matches;
     particlesJS("particles-js", {
       particles: {
-        number: { value: 70, density: { enable: true, value_area: 900 } },
+        number: { value: isNarrow ? 32 : 70, density: { enable: true, value_area: isNarrow ? 700 : 900 } },
         color: { value: ["#ffffff", "#8eb6ff", "#2f6bff"] },
         shape: { type: "circle" },
         opacity: {
@@ -331,20 +340,20 @@
           anim: { enable: true, speed: 0.8, opacity_min: 0.15, sync: false },
         },
         size: {
-          value: 3,
+          value: isNarrow ? 2.2 : 3,
           random: true,
           anim: { enable: true, speed: 2, size_min: 0.6, sync: false },
         },
         line_linked: {
           enable: true,
-          distance: 140,
+          distance: isNarrow ? 110 : 140,
           color: "#ffffff",
           opacity: 0.28,
           width: 1,
         },
         move: {
           enable: true,
-          speed: 1.6,
+          speed: isNarrow ? 1.1 : 1.6,
           direction: "none",
           random: true,
           straight: false,
@@ -355,7 +364,7 @@
       interactivity: {
         detect_on: "canvas",
         events: {
-          onhover: { enable: true, mode: "grab" },
+          onhover: { enable: !isNarrow, mode: "grab" },
           onclick: { enable: true, mode: "push" },
           resize: true,
         },
